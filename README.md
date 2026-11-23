@@ -1,101 +1,102 @@
-<<picture>
-  <source media="(max-width: 1012px) and (prefers-reduced-motion: reduce)" srcset="assets/hero-mobile-still.svg">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/hero-still.svg">
-  <source media="(max-width: 1012px)" srcset="assets/hero-mobile.svg">
-  <img src="assets/hero.svg" width="100%" alt="DOOOPEE — создаю новое. Софт, интерфейсы, цифровые продукты.">
-</picture>
-
-<p><samp>$ профиль → DOOOPEE &nbsp; / &nbsp; $ сейчас → NEXEL</samp></p>
-
-Создаю собственные программные продукты, пробую новые технологии и уделяю внимание деталям, которые делают интерфейс удобным и приятным.
-
-[Знакомство с NEXEL ↗](https://github.com/Dooopee/NEXEL) &nbsp; · &nbsp; [Скачать релиз](https://github.com/Dooopee/NEXEL/releases/latest) &nbsp; · &nbsp; [Публичные репозитории](https://github.com/Dooopee?tab=repositories)
-
-<br>
-
-## Главный проект
-
-<a href="https://github.com/Dooopee/NEXEL">
 <picture>
-  <source media="(max-width: 1012px) and (prefers-reduced-motion: reduce)" srcset="assets/nexel-mobile-still.svg">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/nexel-still.svg">
-  <source media="(max-width: 1012px)" srcset="assets/nexel-mobile.svg">
-  <img src="assets/nexel.svg" width="100%" alt="NEXEL — независимый лаунчер Minecraft Java Edition для Windows. Твоя игра. Твоё пространство.">
+  <source media="(max-width: 720px)" srcset="assets/odd-hero-mobile.svg">
+  <img src="assets/odd-hero.svg" width="100%" alt="DOOOPEE — ODD PRACTIC. Тренировочный хаб для CS2.">
 </picture>
-</a>
 
-**NEXEL** объединяет отдельные установки Minecraft, моды, скины и управление Java в одном интерфейсе.
+**Dooopee.** Разрабатываю собственные продукты, проектирую интерфейсы и довожу небольшие детали до рабочего состояния.
 
-| Твоё пространство | Что доступно |
+Сейчас основной фокус — **ODD PRACTIC**: тренировки в Counter-Strike 2, в которых важно не просто повторять упражнение, а понимать, *какой навык ты отрабатываешь и что делать дальше*.
+
+[ODD PRACTIC](#odd-practic) · [Другие проекты](#другие-проекты) · [Мой подход](#мой-подход) · [GitHub](https://github.com/Dooopee?tab=repositories)
+
+---
+
+## ODD PRACTIC
+
+**CS2 / training hub / early development**
+
+Хочу собрать в одном месте тренировочные карты, упражнения и понятную структуру занятий. Не набор случайных испытаний, а систему, к которой можно возвращаться: выбрал навык, потренировался, разобрал ошибки, повторил.
+
+<picture>
+  <source media="(max-width: 720px)" srcset="assets/odd-method-mobile.svg">
+  <img src="assets/odd-method.svg" width="100%" alt="Концепция тренировочного цикла ODD PRACTIC: упражнение, повтор, разбор, следующая цель.">
+</picture>
+
+<sub>Иллюстрация показывает проектируемую логику тренировок. Это не скриншот готового продукта.</sub>
+
+**Что рассматриваю для развития проекта:**
+
+| Направление | Зачем |
 | :--- | :--- |
-| **Сборки** | Изолированные установки Vanilla, Fabric, Forge и NeoForge; импорт .mrpack |
-| **Моды и Java** | Поиск Modrinth, установка зависимостей и автоматическая настройка Java |
-| **Скины и обновления** | Локальная библиотека, предпросмотр в 3D и обновления с проверкой Ed25519 и SHA-256 |
+| **Aim / Reaction** | Отрабатывать первое наведение, точность и реакцию в повторяемых условиях |
+| **Movement / Peeking** | Тренировать выходы, остановку перед выстрелом и работу с углами |
+| **Recoil / Control** | Отдельно работать над контролем отдачи и стабильностью серий |
+| **Practice flow** | Сделать выбор упражнения, повтор и переход к следующей задаче простыми и понятными |
 
-[![Настоящий главный экран NEXEL из публичной галереи проекта](assets/nexel-home.webp)](https://github.com/Dooopee/NEXEL#readme)
-<sub>Реальный интерфейс NEXEL из опубликованной владельцем галереи. Карточка выше — декоративная графика.</sub>
-
-<!-- CURRENT:START -->
-**Сейчас создаю — NEXEL.** Последний стабильный релиз: [v0.4.2](https://github.com/Dooopee/NEXEL/releases/latest), опубликован 2026-10-29.
-<!-- CURRENT:END -->
-
-[**Скачать NEXEL для Windows ↗**](https://github.com/Dooopee/NEXEL/releases/latest) &nbsp; · &nbsp; [История версий](https://github.com/Dooopee/NEXEL/releases) &nbsp; · &nbsp; [Сообщить об ошибке](https://github.com/Dooopee/NEXEL/issues)
+**Текущий статус:** концепция и ранняя разработка. Репозиторий ODD-PRACTIC закрыт; публичной сборки и проверенных игровых режимов пока нет. Функции в таблице — направления работы, а не перечень уже реализованного.
 
 <details>
-<summary>Ещё один экран · возможности и планы</summary>
+<summary><b>Как должна ощущаться тренировка</b></summary>
 
-![Экран сборок NEXEL](assets/nexel-builds.webp)
+Не хочу заставлять игрока разбираться в десятках экранов до первого выстрела. Хорошая сессия должна начинаться быстро.
 
-NEXEL ID пока хранится локально. Messenger, друзья, Studio и облачные интеграции находятся в разработке. Видимость скина зависит от игрового клиента и сервера. NEXEL — независимый продукт, не связанный с Mojang или Microsoft. Актуальные возможности и ограничения описаны в [документации](https://github.com/Dooopee/NEXEL#readme) и [примечаниях к релизу](https://github.com/Dooopee/NEXEL/releases/latest).
+1. Выбрать конкретный навык — не абстрактное «потренироваться».
+2. Получить короткое понятное упражнение с ясным условием.
+3. Повторить попытку без лишних переходов и ожидания.
+4. Посмотреть на ошибки и решить, что именно менять в следующем подходе.
+
+Интерфейс, подсказки и анимация должны помогать этому сценарию, а не отвлекать от него.
 
 </details>
 
-<br>
+<details>
+<summary><b>Что важно в картах и режимах</b></summary>
 
-## Инструменты и подход
+Читаемость целей и траекторий, предсказуемая логика рестарта, удобная настройка сложности, отсутствие визуального шума и стабильная работа в реальных игровых условиях.
 
-<picture>
-  <source media="(max-width: 1012px) and (prefers-color-scheme: light)" srcset="assets/stack-mobile-light.svg">
-  <source media="(max-width: 1012px)" srcset="assets/stack-mobile-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/stack-light.svg">
-  <img src="assets/stack-dark.svg" width="100%" alt="Приложение: TypeScript, Electron, electron-builder и CSS. Этот профиль: Node.js, SVG, Git и GitHub Actions.">
-</picture>
+Пока это требования к проектированию. Реализацию и игровые проверки буду отличать от идей.
 
-<sub>Инструменты приложения подтверждены публичными материалами NEXEL. Отдельно указаны технологии этого профиля.</sub>
+</details>
 
-<br>
+---
 
-## Публичная активность
+## Другие проекты
 
-<picture>
-  <source media="(max-width: 1012px) and (prefers-color-scheme: light)" srcset="assets/metrics-mobile-light.svg">
-  <source media="(max-width: 1012px)" srcset="assets/metrics-mobile-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/metrics-light.svg">
-  <img src="assets/metrics-dark.svg" width="100%" alt="Проверенный снимок публичных репозиториев, звёзд, языков открытого кода и настоящего календаря активности GitHub. Дата указана на карточке.">
-</picture>
+### NEXEL
 
-<sub>После включения Actions данные обновляются раз в сутки при изменениях. Учитываются собственные публичные репозитории без форков; звёзды суммируются по ним. Календарь соответствует публичному отображению GitHub и может включать обезличенные приватные вклады, если они включены в настройках. Языки описывают опубликованный код, а не закрытые исходники NEXEL.</sub>
+Независимый лаунчер Minecraft Java Edition для Windows. Отдельные игровые установки, работа со сборками и модами, настройка Java, скины и обновления.
 
-[Посмотреть активность на GitHub ↗](https://github.com/Dooopee?tab=overview) &nbsp; · &nbsp; [Источники и методика](docs/MAINTENANCE.md#источники-данных)
+[![Главный экран NEXEL — изображение из публичного репозитория](assets/nexel-home.webp)](https://github.com/Dooopee/NEXEL)
 
-<br>
+[Репозиторий и документация](https://github.com/Dooopee/NEXEL) · [Релизы для Windows](https://github.com/Dooopee/NEXEL/releases) · [Обратная связь](https://github.com/Dooopee/NEXEL/issues)
 
-## Экосистема проектов
+<sub>Выше — настоящий экран NEXEL, а не концептуальный макет. Актуальные возможности и ограничения описаны в репозитории.</sub>
 
-<picture>
-  <source media="(max-width: 1012px) and (prefers-color-scheme: light)" srcset="assets/ecosystem-mobile-light.svg">
-  <source media="(max-width: 1012px)" srcset="assets/ecosystem-mobile-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/ecosystem-light.svg">
-  <img src="assets/ecosystem-dark.svg" width="100%" alt="DOOOPEE — айдентика и эксперименты. NEXEL — лаунчер для Windows. Два связанных публичных репозитория.">
-</picture>
+---
 
-[DOOOPEE / айдентика](https://github.com/Dooopee/Dooopee) &nbsp; → &nbsp; [NEXEL / продукт](https://github.com/Dooopee/NEXEL)
+## Мой подход
 
-<br>
+**Функция не готова, если она только выглядит готовой.**
 
-<picture>
-  <source media="(max-width: 1012px)" srcset="assets/footer-mobile.svg">
-  <img src="assets/footer.svg" width="100%" alt="Создавать новое. Развивать лучшее.">
-</picture>
+Проверяю сценарии целиком: что происходит при первом запуске, при ошибке, при повторном нажатии, при пустом состоянии и при возвращении пользователя в приложение. Отдельно смотрю на скорость, читаемость и поведение интерфейса на небольших экранах.
 
-[GitHub](https://github.com/Dooopee) &nbsp; · &nbsp; [Поддержка NEXEL](https://github.com/Dooopee/NEXEL/issues) &nbsp; · &nbsp; [Об оформлении](docs/DESIGN.md)
+В оформлении предпочитаю сдержанную типографику, чёткую иерархию и motion design, у которого есть причина. Без декоративных счётчиков, бессмысленных бейджей и анимаций ради анимаций.
+
+**Работаю с:** TypeScript, JavaScript, Electron, Vite, HTML/CSS, SVG, Git и GitHub. В задачах по CS2 изучаю возможности игрового инструментария и проектирования тренировочных карт.
+
+<details>
+<summary><b>Что для меня означает «готово»</b></summary>
+
+- Сценарий можно пройти от начала до конца, не попав в тупик.
+- Ошибки и нештатный ввод обрабатываются явно.
+- Пользовательские данные и уже работающие функции сохраняются.
+- Изменение проверено, а ограничение не скрыто за красивым экраном.
+- Интерфейс остаётся понятным без анимации и не ломается на мобильном устройстве.
+
+</details>
+
+---
+
+<sub>**DOOOPEE / 2026** · Проекты развиваются поэтапно. Публичные материалы отделены от закрытой разработки.</sub>
+
+[Все доступные репозитории](https://github.com/Dooopee?tab=repositories) · [Как устроено оформление профиля](docs/PROFILE-DESIGN.md)
