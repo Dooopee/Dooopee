@@ -75,9 +75,10 @@ def check_markdown(path: Path) -> None:
     for raw in re.findall(r"\b(?:src|srcset|href)\s*=\s*['\"]([^'\"]+)['\"]", text):
         for src in raw.split(","):
             check_link(path, src.strip().split()[0])
-    if text.count("<details>") != text.count("</details>"):
+    structural = re.sub(r"`[^`\\n]*`", "", text)
+    if structural.count("<details>") != structural.count("</details>"):
         error(f"{path.relative_to(ROOT)}: unbalanced details")
-    if text.count("<summary>") != text.count("</summary>"):
+    if structural.count("<summary>") != structural.count("</summary>"):
         error(f"{path.relative_to(ROOT)}: unbalanced summary")
     for image in re.findall(r"<img\b[^>]*>", text):
         if not re.search(r"\balt\s*=\s*['\"][^'\"]+['\"]", image):
@@ -96,9 +97,9 @@ def check_svg(path: Path) -> None:
     root = tree.getroot()
     if root.tag != "{http://www.w3.org/2000/svg}svg" or "viewBox" not in root.attrib:
         error(f"{path.relative_to(ROOT)}: missing SVG namespace or viewBox")
-    if not root.find("{http://www.w3.org/2000/svg}title") is not None:
+    if root.find("{http://www.w3.org/2000/svg}title") is None:
         error(f"{path.relative_to(ROOT)}: missing title element")
-    if not root.find("{http://www.w3.org/2000/svg}desc") is not None:
+    if root.find("{http://www.w3.org/2000/svg}desc") is None:
         error(f"{path.relative_to(ROOT)}: missing desc element")
 
     body = path.read_text(encoding="utf-8")
