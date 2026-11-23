@@ -1,0 +1,35 @@
+name: Profile QA
+
+on:
+  pull_request:
+    paths:
+      - 'README.md'
+      - 'assets/odd-*.svg'
+      - 'docs/PROFILE-DESIGN.md'
+      - 'scripts/check_profile.py'
+      - '.github/workflows/profile-qa.yml'
+  push:
+    branches:
+      - 'profile/**'
+    paths:
+      - 'README.md'
+      - 'assets/odd-*.svg'
+      - 'docs/PROFILE-DESIGN.md'
+      - 'scripts/check_profile.py'
+      - '.github/workflows/profile-qa.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Validate profile content and SVG
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Run offline profile checks
+        run: python3 scripts/check_profile.py
