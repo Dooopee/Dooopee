@@ -66,6 +66,8 @@ def anchors(text: str) -> set[str]:
 def check_markdown(path: Path) -> None:
     text = path.read_text(encoding="utf-8")
     found_anchors = anchors(text)
+    if re.search(r"nexel", text, flags=re.IGNORECASE):
+        error(f"{path.relative_to(ROOT)}: obsolete project reference")
     for raw in re.findall(r"!?\[[^\]]*\]\(([^)\s]+)(?:\s+\"[^\"]+\")?\)", text):
         if raw.startswith("#"):
             if raw[1:] not in found_anchors:
@@ -125,6 +127,9 @@ def main() -> int:
             error(f"Missing Markdown file: {path}")
         else:
             check_markdown(path)
+    retired = list((ROOT / "assets").glob("nexel*"))
+    if retired:
+        error("Obsolete project assets remain in profile: " + ", ".join(p.name for p in retired))
     if len(ASSETS) < 5:
         error("Expected at least five ODD SVG assets")
     for path in ASSETS:

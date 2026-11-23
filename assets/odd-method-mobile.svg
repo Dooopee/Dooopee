@@ -1,13 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="680" height="650" viewBox="0 0 680 650" role="img" aria-labelledby="title desc">
-<title id="title">ODD PRACTIC — тренировочный цикл</title><desc id="desc">Мобильная схема концепции: упражнение, повтор, разбор, следующая цель.</desc>
-<style>text{font-family:Arial,Helvetica,sans-serif}.mono{font-family:Consolas,'Liberation Mono',monospace}
-@keyframes pulse{0%,100%{opacity:.55}50%{opacity:1}}.circle{animation:pulse 4s ease-in-out infinite}
-@media(prefers-reduced-motion:reduce){.circle{animation:none!important}}</style>
-<rect width="680" height="650" rx="20" fill="#111"/><rect x="1" y="1" width="678" height="648" rx="19" fill="none" stroke="#414141"/>
-<text x="40" y="56" font-size="16" fill="#B6B6B6" class="mono">TRAINING LOOP / CONCEPT</text>
-<text x="40" y="107" font-size="32" fill="#F5F5F5" font-weight="700">Упражнение → следующая цель</text>
-<path d="M82 164V589" fill="none" stroke="#555" stroke-width="2" stroke-dasharray="4 10"/>
-<g fill="#EEE"><circle cx="82" cy="174" r="10" class="circle"/><circle cx="82" cy="312" r="9"/><circle cx="82" cy="451" r="9"/><circle cx="82" cy="588" r="9"/></g>
-<g class="mono" font-size="15" fill="#A6A6A6"><text x="120" y="158">01 / PRACTICE</text><text x="120" y="296">02 / REPEAT</text><text x="120" y="435">03 / REVIEW</text><text x="120" y="573">04 / NEXT</text></g>
-<g font-size="31" font-weight="600" fill="#FAFAFA"><text x="120" y="198">Упражнение</text><text x="120" y="336">Повтор</text><text x="120" y="475">Разбор</text><text x="120" y="613">Следующая цель</text></g>
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="590" viewBox="0 0 680 590" role="img" aria-labelledby="title desc">
+<title id="title">ODD PRACTIC — session loop</title>
+<desc id="desc">Mobile vertical developer-style training diagram: select, practice, review, repeat. These are planned steps, not features of a released game.</desc>
+<style>
+text{font-family:Arial,Helvetica,sans-serif}.mono{font-family:Consolas,'Liberation Mono',monospace}
+@keyframes move{to{stroke-dashoffset:-80}}
+@keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
+.path{animation:move 8s linear infinite}.dot{animation:pulse 4s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){.path,.dot{animation:none!important}}
+</style>
+<rect width="680" height="590" rx="18" fill="#0C0D10"/><rect x="1" y="1" width="678" height="588" rx="17" fill="none" stroke="#373A40" stroke-width="2"/>
+<text x="40" y="48" font-size="18" fill="#C2C6CB" class="mono">SESSION / FLOW MODEL</text><text x="40" y="80" font-size="14" fill="#92969E" class="mono">CONCEPT / NOT RELEASED</text>
+<path d="M80 121V525" stroke="#3C4048" stroke-width="2"/><path class="path" d="M80 121V525" stroke="#FAFAFA" stroke-opacity=".6" stroke-width="2" stroke-dasharray="20 24 4 32"/>
+<g fill="#0C0D10" stroke="#E4E5E7" stroke-width="2"><circle cx="80" cy="145" r="12"/><circle cx="80" cy="268" r="12"/><circle cx="80" cy="390" r="12"/><circle cx="80" cy="513" r="12"/></g>
+<g class="dot" fill="#FFFFFF"><circle cx="80" cy="145" r="4"/><circle cx="80" cy="268" r="4"/><circle cx="80" cy="390" r="4"/><circle cx="80" cy="513" r="4"/></g>
+<g class="mono" fill="#A7ABB1" font-size="16"><text x="119" y="134">01 / SELECT</text><text x="119" y="257">02 / PRACTICE</text><text x="119" y="379">03 / REVIEW</text><text x="119" y="502">04 / REPEAT</text></g>
+<g fill="#F6F7F8" font-size="33" font-weight="700"><text x="119" y="178">Выбор</text><text x="119" y="301">Тренировка</text><text x="119" y="423">Разбор</text><text x="119" y="546">Повтор</text></g>
 </svg>
