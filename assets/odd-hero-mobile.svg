@@ -1,15 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="680" height="615" viewBox="0 0 680 615" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="668" viewBox="0 0 680 668" role="img" aria-labelledby="title desc">
 <title id="title">ODD PRACTIC — профиль DOOOPEE</title>
-<desc id="desc">Мобильная монохромная версия баннера тренировочного CS2-проекта с тонкой анимацией мишени.</desc>
+<desc id="desc">Мобильная монохромная версия баннера тренировочного CS2-проекта с тонкой анимацией траекторий и фирменным знаком.</desc>
 <defs><pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#777" stroke-opacity=".10"/></pattern></defs>
 <style>
 text{font-family:Arial,Helvetica,sans-serif}.mono{font-family:Consolas,'Liberation Mono',monospace}
 @keyframes enter{from{opacity:.35;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-@keyframes spin{to{transform:rotate(360deg)}}
-.copy{animation:enter 1s ease-out both}.ring{transform-origin:340px 446px;animation:spin 36s linear infinite}
-@media(prefers-reduced-motion:reduce){.copy,.ring{animation:none!important}}
+@keyframes soft{0%,100%{opacity:.4}50%{opacity:.9}}}
+.copy{animation:enter 1s ease-out both}.signal{animation:soft 6s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){.copy,.signal{animation:none!important}}
 </style>
-<rect width="680" height="615" rx="20" fill="#0B0B0B"/><rect width="680" height="615" rx="20" fill="url(#grid)"/><rect x="1" y="1" width="678" height="613" rx="19" fill="none" stroke="#444"/>
+<rect width="680" height="668" rx="20" fill="#0B0B0B"/><rect width="680" height="668" rx="20" fill="url(#grid)"/><rect x="1" y="1" width="678" height="666" rx="19" fill="none" stroke="#444"/>
 <g class="copy">
  <rect x="42" y="40" width="9" height="9" rx="2" fill="#F5F5F5"/><text x="65" y="50" fill="#BDBDBD" font-size="17" class="mono">DOOOPEE / CURRENT WORK</text>
  <text x="39" y="178" font-size="128" font-weight="800" fill="#F5F5F5" letter-spacing="-7">ODD</text>
@@ -17,8 +17,12 @@ text{font-family:Arial,Helvetica,sans-serif}.mono{font-family:Consolas,'Liberati
  <path d="M42 302H637" stroke="#555"/>
  <text x="42" y="350" font-size="28" font-weight="600" fill="#F5F5F5">Тренировочный хаб для CS2</text>
 </g>
-<g fill="none" stroke="#F5F5F5"><circle cx="340" cy="472" r="98" stroke-opacity=".26"/><circle cx="340" cy="472" r="61" stroke-opacity=".4"/><circle cx="340" cy="472" r="25" stroke-opacity=".55"/><path d="M212 472H468M340 344V600" stroke-opacity=".16"/></g>
-<g class="ring"><circle cx="340" cy="472" r="118" stroke="#999" stroke-dasharray="2 10" stroke-opacity=".4" fill="none"/><path d="M340 354a118 118 0 0 1 83 35" stroke="#FFF" stroke-width="2" fill="none"/></g>
-<circle cx="340" cy="472" r="4" fill="#FFF"/>
-<text x="42" y="586" fill="#B3B3B3" font-size="16" class="mono">DESIGN &amp; DEVELOPMENT / EARLY STAGE</text>
+<g fill="none" stroke="#8F8F8F" opacity=".4"><path d="M154 439L340 366L526 439V557L340 624L154 557Z"/><path d="M154 557L526 439" stroke-opacity=".2"/></g>
+<g transform="translate(186 330) scale(.30)"><g fill="#F5F5F5">
+<path d="M244 317L512 154L781 317L713 386L512 264L307 389Z"/>
+<path d="M244 708L512 870L781 708L714 638L512 758L309 636Z"/>
+<path d="M366 518L510 412L657 518L510 625Z"/>
+</g></g>
+<g class="signal"><circle cx="176" cy="445" r="4" fill="#F5F5F5"/><path d="M496 564H542" stroke="#F5F5F5" stroke-width="2"/></g>
+<text x="42" y="639" fill="#B3B3B3" font-size="16" class="mono">DESIGN &amp; DEVELOPMENT / EARLY STAGE</text>
 </svg>
