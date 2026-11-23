@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="390" viewBox="0 0 1200 390" role="img" aria-labelledby="title desc">
+<title id="title">DOOOPEE — ODD PRACTIC</title>
+<desc id="desc">Монохромный титульный экран. ODD PRACTIC — концепция тренировочного хаба для Counter-Strike 2. Справа абстрактная мишень с мягкой анимацией.</desc>
+<defs>
+ <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#777" stroke-opacity=".09"/></pattern>
+ <linearGradient id="fade"><stop stop-color="#D8D8D8" stop-opacity=".3"/><stop offset="1" stop-color="#D8D8D8" stop-opacity="0"/></linearGradient>
+ <clipPath id="panel"><rect x="1" y="1" width="1198" height="388" rx="18"/></clipPath>
+</defs>
+<style>
+text{font-family:Arial,Helvetica,sans-serif}
+.mono{font-family:Consolas,'Liberation Mono',monospace}
+@keyframes intro{from{opacity:.35;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+@keyframes rotate{to{transform:rotate(360deg)}}
+@keyframes wander{0%,100%{transform:translate(0,0)}32%{transform:translate(-18px,11px)}65%{transform:translate(12px,-11px)}}
+@keyframes line{0%{stroke-dashoffset:480}100%{stroke-dashoffset:0}}
+.copy{animation:intro .9s cubic-bezier(.2,.8,.2,1) both}
+.ring{transform-origin:968px 195px;animation:rotate 36s linear infinite}
+.aim{animation:wander 11s ease-in-out infinite}
+.trace{stroke-dasharray:480;stroke-dashoffset:0;animation:line 3s ease-out both}
+@media(prefers-reduced-motion:reduce){.copy,.ring,.aim,.trace{animation:none!important}}
+</style>
+<rect width="1200" height="390" rx="19" fill="#0B0B0B"/>
+<g clip-path="url(#panel)">
+ <rect x="0" y="0" width="1200" height="390" fill="url(#grid)"/>
+ <rect x="0" y="0" width="1200" height="390" fill="#0B0B0B" opacity=".28"/>
+ <path d="M0 1H1200M0 389H1200" stroke="#434343" opacity=".7"/>
+ <path d="M739 0V390" stroke="#343434"/>
+ <g fill="none" stroke="#F5F5F5">
+  <circle cx="968" cy="195" r="124" stroke-opacity=".26"/>
+  <circle cx="968" cy="195" r="89" stroke-opacity=".35"/>
+  <circle cx="968" cy="195" r="49" stroke-opacity=".5"/>
+  <circle cx="968" cy="195" r="153" stroke="#777" stroke-opacity=".3" stroke-dasharray="2 12"/>
+  <path d="M968 28V362M801 195H1135" stroke-opacity=".13"/>
+ </g>
+ <g class="ring" fill="none" stroke="#F1F1F1" stroke-width="2" stroke-linecap="square">
+  <path d="M968 42a153 153 0 0 1 108 45" stroke-opacity=".75"/>
+  <path d="M860 303a153 153 0 0 1-45-108" stroke-opacity=".4"/>
+ </g>
+ <path class="trace" d="M860 223Q906 198 948 210T1024 177" stroke="url(#fade)" fill="none" stroke-width="2"/>
+ <g class="aim"><circle cx="948" cy="210" r="7" fill="#F5F5F5"/><circle cx="948" cy="210" r="19" fill="none" stroke="#F5F5F5" stroke-opacity=".68"/><path d="M948 184v10m0 32v10m-26-26h10m32 0h10" stroke="#F5F5F5" stroke-opacity=".65"/></g>
+ <g class="copy">
+  <rect x="54" y="42" width="8" height="8" rx="2" fill="#F1F1F1"/>
+  <text x="77" y="50" font-size="14" fill="#B9B9B9" class="mono" letter-spacing="1.5">DOOOPEE / INDEPENDENT DEVELOPMENT</text>
+  <text x="54" y="174" font-size="98" font-weight="800" fill="#F8F8F8" letter-spacing="-5">ODD PRACTIC</text>
+  <path d="M55 196H652" stroke="#575757"/>
+  <text x="55" y="243" font-size="26" font-weight="600" fill="#EAEAEA">Тренировочный хаб для CS2</text>
+  <text x="55" y="278" font-size="19" fill="#B5B5B5">Карты, упражнения, повторение, разбор.</text>
+  <text x="55" y="352" font-size="13" fill="#B0B0B0" class="mono" letter-spacing="1.1">CURRENT WORK  /  DESIGN &amp; DEVELOPMENT</text>
+ </g>
+ <text x="1152" y="351" text-anchor="end" fill="#999" font-size="12" class="mono">01 / PRACTICE</text>
+</g>
+</svg>
