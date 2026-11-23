@@ -1,48 +1,66 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="390" viewBox="0 0 1200 390" role="img" aria-labelledby="title desc">
-<title id="title">DOOOPEE — ODD PRACTIC</title>
-<desc id="desc">Монохромный титульный экран. ODD PRACTIC — концепция тренировочного хаба для Counter-Strike 2. Справа оригинальный геометрический знак и мягкая анимация траекторий.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-labelledby="t d">
+<title id="t">ODD PRACTIC — CS2 training hub</title>
+<desc id="d">Monochrome developer-style motion graphic with the ODD PRACTIC title, geometric identity, moving scan beam, tracking lines and development status. Motion is decorative and can be disabled.</desc>
 <defs>
- <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#777" stroke-opacity=".09"/></pattern>
- <linearGradient id="fade"><stop stop-color="#D8D8D8" stop-opacity=".3"/><stop offset="1" stop-color="#D8D8D8" stop-opacity="0"/></linearGradient>
- <clipPath id="panel"><rect x="1" y="1" width="1198" height="388" rx="18"/></clipPath>
+<linearGradient id="beam"><stop stop-color="#FFFFFF" stop-opacity="0"/><stop offset=".5" stop-color="#FFFFFF" stop-opacity=".085"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>
+<linearGradient id="fade"><stop stop-color="#FFFFFF" stop-opacity="0"/><stop offset=".5" stop-color="#FFFFFF" stop-opacity=".8"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>
+<pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#8D929B" stroke-opacity=".085"/></pattern>
+<clipPath id="frame"><rect x="1" y="1" width="1198" height="428" rx="18"/></clipPath>
 </defs>
 <style>
 text{font-family:Arial,Helvetica,sans-serif}
 .mono{font-family:Consolas,'Liberation Mono',monospace}
-@keyframes intro{from{opacity:.35;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
-@keyframes drift{0%,100%{opacity:.35}50%{opacity:.8}}
-@keyframes markReveal{from{opacity:.55;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
-@keyframes line{from{stroke-dashoffset:480}to{stroke-dashoffset:0}}
-.copy{animation:intro .9s cubic-bezier(.2,.8,.2,1) both}
-.signal{animation:drift 7s ease-in-out infinite}
-.mark{animation:markReveal 1.6s ease-out both}
-.trace{stroke-dasharray:480;stroke-dashoffset:0;animation:line 3s ease-out both}
-@media(prefers-reduced-motion:reduce){.copy,.signal,.mark,.trace{animation:none!important}}
+@keyframes entrance{from{opacity:.2;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes sweep{from{transform:translateX(-25px)}to{transform:translateX(440px)}}
+@keyframes stream{to{stroke-dashoffset:-140}}
+@keyframes oscillate{0%,100%{opacity:.22}50%{opacity:.75}}
+@keyframes drift{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes draw{from{stroke-dashoffset:210}to{stroke-dashoffset:0}}
+.intro{animation:entrance 1.1s cubic-bezier(.2,.8,.2,1) both}
+.beam{animation:sweep 8s ease-in-out infinite alternate}
+.stream{animation:stream 13s linear infinite}
+.pulse{animation:oscillate 5s ease-in-out infinite}
+.float{animation:drift 7s ease-in-out infinite}
+.draw{stroke-dasharray:210;animation:draw 2s ease-out both}
+@media(prefers-reduced-motion:reduce){.intro,.beam,.stream,.pulse,.float,.draw{animation:none!important}}
 </style>
-<rect width="1200" height="390" rx="19" fill="#0B0B0B"/>
-<g clip-path="url(#panel)">
- <rect x="0" y="0" width="1200" height="390" fill="url(#grid)"/>
- <rect x="0" y="0" width="1200" height="390" fill="#0B0B0B" opacity=".28"/>
- <path d="M0 1H1200M0 389H1200" stroke="#434343" opacity=".7"/>
- <path d="M739 0V390" stroke="#343434"/>
-
- <g fill="none" stroke="#AFAFAF" opacity=".38"><path d="M792 102L970 29L1143 105V285L970 360L792 285Z"/><path d="M812 288L1131 104M794 199L1145 199" stroke-opacity=".28"/><path d="M827 80H866M1070 309H1109" stroke="#F5F5F5" stroke-opacity=".65"/></g>
- <path class="trace" d="M786 315Q905 260 1000 170T1140 71" stroke="url(#fade)" fill="none" stroke-width="2"/>
- <g class="signal"><circle cx="815" cy="160" r="3" fill="#F5F5F5"/><circle cx="1116" cy="264" r="2.5" fill="#BABABA"/></g>
- <g transform="translate(786 13) scale(.355)"><g class="mark"><g fill="#F5F5F5">
-<path d="M244 317L512 154L781 317L713 386L512 264L307 389Z"/>
-<path d="M244 708L512 870L781 708L714 638L512 758L309 636Z"/>
-<path d="M366 518L510 412L657 518L510 625Z"/>
-</g></g></g>
- <g class="copy">
-  <rect x="54" y="42" width="8" height="8" rx="2" fill="#F1F1F1"/>
-  <text x="77" y="50" font-size="14" fill="#B9B9B9" class="mono" letter-spacing="1.5">DOOOPEE / INDEPENDENT DEVELOPMENT</text>
-  <text x="54" y="174" font-size="98" font-weight="800" fill="#F8F8F8" letter-spacing="-5">ODD PRACTIC</text>
-  <path d="M55 196H652" stroke="#575757"/>
-  <text x="55" y="243" font-size="26" font-weight="600" fill="#EAEAEA">Тренировочный хаб для CS2</text>
-  <text x="55" y="278" font-size="19" fill="#B5B5B5">Карты, упражнения, повторение, разбор.</text>
-  <text x="55" y="352" font-size="13" fill="#B0B0B0" class="mono" letter-spacing="1.1">CURRENT WORK  /  DESIGN &amp; DEVELOPMENT</text>
+<rect width="1200" height="430" rx="19" fill="#090A0D"/>
+<g clip-path="url(#frame)">
+ <rect x="1" y="1" width="1198" height="428" fill="url(#grid)"/>
+ <rect x="1" y="1" width="1198" height="428" rx="18" fill="none" stroke="#34373D" stroke-width="2"/>
+ <path d="M690 0V430M690 64H1200M690 365H1200" fill="none" stroke="#3D4047" stroke-opacity=".85"/>
+ <path d="M42 64H654M42 365H654" stroke="#35383E"/>
+ <g class="beam"><rect x="705" y="66" width="80" height="298" fill="url(#beam)"/></g>
+ <g fill="none" stroke="#7C818A" stroke-width="1">
+  <path d="M730 122L852 80H1050L1168 144V293L1050 349H858L730 301Z" opacity=".45"/>
+  <path d="M745 285L1115 92" stroke-opacity=".17"/>
+  <path d="M728 174H1166M943 80V350" stroke-opacity=".17"/>
+  <path d="M789 100l-24 24m364 173 23-23M789 319l-24-24m364-164 23 22" stroke-opacity=".55"/>
  </g>
- <text x="1152" y="351" text-anchor="end" fill="#999" font-size="12" class="mono">01 / PRACTICE</text>
+ <g class="stream" fill="none" stroke="#F3F3F4" stroke-width="1.5" stroke-dasharray="30 24 6 80" opacity=".45">
+  <path d="M730 122L852 80H1050L1168 144V293L1050 349H858L730 301Z"/>
+ </g>
+ <g class="float" transform="translate(796 68) scale(.295)">
+  <g fill="#F6F6F7">
+    <path d="M244 317L512 154L781 317L713 386L512 264L307 389Z"/>
+    <path d="M244 708L512 870L781 708L714 638L512 758L309 636Z"/>
+    <path d="M366 518L510 412L657 518L510 625Z"/>
+  </g>
+ </g>
+ <path class="draw" d="M753 344H864" stroke="url(#fade)" stroke-width="2" fill="none"/>
+ <circle class="pulse" cx="1081" cy="103" r="4" fill="#FFFFFF"/>
+ <circle class="pulse" cx="790" cy="291" r="3" fill="#FFFFFF"/>
+ <g class="intro">
+  <rect x="44" y="28" width="7" height="7" rx="1" fill="#F5F5F5"/>
+  <text x="64" y="35" fill="#B4B6BC" font-size="13" class="mono" letter-spacing="1.8">DOOOPEE / CURRENT BUILD</text>
+  <text x="646" y="35" fill="#8F949C" text-anchor="end" font-size="12" class="mono">README.MD</text>
+  <text x="38" y="181" fill="#F7F7F8" font-size="120" font-weight="800" letter-spacing="-6">ODD</text>
+  <text x="38" y="285" fill="#F7F7F8" font-size="107" font-weight="800" letter-spacing="-6">PRACTIC</text>
+  <text x="44" y="336" fill="#C4C7CD" font-size="20" letter-spacing="2.3">CS2 / TRAINING HUB</text>
+  <text x="44" y="397" fill="#A3A7AE" font-size="13" class="mono">PRIVATE DEVELOPMENT</text>
+  <text x="647" y="397" fill="#858A92" text-anchor="end" font-size="13" class="mono">01 — 04 / PRACTICE LOOP</text>
+ </g>
+ <text x="737" y="39" fill="#B9BBC2" font-size="12" class="mono" letter-spacing="1.3">EXPERIMENT / TRAIN / REPEAT</text>
+ <text x="1158" y="396" fill="#9CA0A6" text-anchor="end" font-size="12" class="mono">ODD / IDENTITY SYSTEM</text>
 </g>
 </svg>
