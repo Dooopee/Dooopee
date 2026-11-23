@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+<title id="title">ODD PRACTIC — abstract target mark</title>
+<desc id="desc">Минималистичный белый геометрический знак на чёрном фоне: разомкнутые кольца и прицельный центр. Без букв.</desc>
+<rect width="512" height="512" rx="112" fill="#0B0B0B"/>
+<circle cx="256" cy="256" r="191" fill="none" stroke="#515151" stroke-width="2"/>
+<circle cx="256" cy="256" r="152" fill="none" stroke="#F5F5F5" stroke-width="22" stroke-dasharray="270 84 105 497" transform="rotate(-82 256 256)" stroke-linecap="butt"/>
+<circle cx="256" cy="256" r="103" fill="none" stroke="#F5F5F5" stroke-width="13" stroke-dasharray="188 459" transform="rotate(132 256 256)" stroke-linecap="butt"/>
+<path d="M256 200v32m0 48v32m-56-56h32m48 0h32" stroke="#F5F5F5" stroke-width="10" stroke-linecap="square"/>
+<circle cx="256" cy="256" r="8" fill="#F5F5F5"/>
+<circle cx="362" cy="150" r="6" fill="#B4B4B4"/>
+</svg>
