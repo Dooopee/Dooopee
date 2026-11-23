@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-labelledby="title desc">
+<title id="title">ODD PRACTIC — схема тренировочного цикла</title>
+<desc id="desc">Четыре этапа задуманного тренировочного процесса: упражнение, повтор, разбор и следующая цель. Это концептуальная схема, не скриншот реализованного приложения.</desc>
+<defs><linearGradient id="path"><stop stop-color="#555"/><stop offset=".5" stop-color="#FFF"/><stop offset="1" stop-color="#555"/></linearGradient></defs>
+<style>
+text{font-family:Arial,Helvetica,sans-serif}.mono{font-family:Consolas,'Liberation Mono',monospace}
+@keyframes move{from{stroke-dashoffset:280}to{stroke-dashoffset:0}}
+@keyframes glow{0%,100%{opacity:.5}50%{opacity:1}}
+.flow{stroke-dasharray:12 12;animation:move 12s linear infinite}
+.node{animation:glow 5s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){.flow,.node{animation:none!important}}
+</style>
+<rect width="1200" height="340" rx="18" fill="#111"/><rect x="1" y="1" width="1198" height="338" rx="17" fill="none" stroke="#414141"/>
+<text x="44" y="53" font-size="14" class="mono" fill="#AFAFAF" letter-spacing="1.4">TRAINING LOOP / CONCEPT, NOT A PRODUCT SCREENSHOT</text>
+<text x="44" y="106" font-size="31" font-weight="700" fill="#F5F5F5">От упражнения — к следующей конкретной цели.</text>
+<path d="M125 171H1077" stroke="#454545" stroke-width="2"/>
+<path class="flow" d="M125 171H1077" stroke="url(#path)" stroke-width="2" fill="none" opacity=".7"/>
+<g fill="#F3F3F3">
+ <circle class="node" cx="125" cy="171" r="8"/><circle cx="443" cy="171" r="8"/><circle cx="760" cy="171" r="8"/><circle cx="1077" cy="171" r="8"/>
+</g>
+<g class="mono" fill="#8C8C8C" font-size="13"><text x="68" y="227">01 / PRACTICE</text><text x="388" y="227">02 / REPEAT</text><text x="705" y="227">03 / REVIEW</text><text x="997" y="227">04 / NEXT</text></g>
+<g fill="#F3F3F3" font-size="22" font-weight="600"><text x="68" y="262">Упражнение</text><text x="388" y="262">Повтор</text><text x="705" y="262">Разбор</text><text x="997" y="262">Цель</text></g>
+<g fill="#AFAFAF" font-size="15"><text x="68" y="289">Одна задача</text><text x="388" y="289">Контроль навыка</text><text x="705" y="289">Что не получилось</text><text x="997" y="289">Что улучшать</text></g>
+</svg>

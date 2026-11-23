@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+<title id="title">ODD PRACTIC — folded route mark</title>
+<desc id="desc">Монохромный геометрический знак: две встречные угловые траектории и центральная грань. Без букв и мишени.</desc>
+<rect width="1024" height="1024" rx="224" fill="#0B0B0B"/>
+<g fill="#F5F5F5">
+  <path d="M244 317L512 154L781 317L713 386L512 264L307 389Z"/>
+  <path d="M244 708L512 870L781 708L714 638L512 758L309 636Z"/>
+  <path d="M366 518L510 412L657 518L510 625Z"/>
+</g>
+</svg>
