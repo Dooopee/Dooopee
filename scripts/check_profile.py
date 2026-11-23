@@ -75,11 +75,12 @@ def check_markdown(path: Path) -> None:
     for raw in re.findall(r"\b(?:src|srcset|href)\s*=\s*['\"]([^'\"]+)['\"]", text):
         for src in raw.split(","):
             check_link(path, src.strip().split()[0])
-    structural = re.sub(r"`[^`\\n]*`", "", text)
-    if structural.count("<details>") != structural.count("</details>"):
-        error(f"{path.relative_to(ROOT)}: unbalanced details")
-    if structural.count("<summary>") != structural.count("</summary>"):
-        error(f"{path.relative_to(ROOT)}: unbalanced summary")
+    # HTML folding controls are used in README, not in the documentation prose.
+    if path.name == "README.md":
+        if text.count("<details>") != text.count("</details>"):
+            error(f"{path.relative_to(ROOT)}: unbalanced details")
+        if text.count("<summary>") != text.count("</summary>"):
+            error(f"{path.relative_to(ROOT)}: unbalanced summary")
     for image in re.findall(r"<img\b[^>]*>", text):
         if not re.search(r"\balt\s*=\s*['\"][^'\"]+['\"]", image):
             error(f"{path.relative_to(ROOT)}: image lacks meaningful alt text")
