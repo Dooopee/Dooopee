@@ -40,13 +40,13 @@ text{font-family:Arial,Helvetica,sans-serif}
  <g class="stream" fill="none" stroke="#F3F3F4" stroke-width="1.5" stroke-dasharray="30 24 6 80" opacity=".45">
   <path d="M730 122L852 80H1050L1168 144V293L1050 349H858L730 301Z"/>
  </g>
- <g class="float" transform="translate(796 68) scale(.295)">
+ <g transform="translate(796 68) scale(.295)"><g class="float">
   <g fill="#F6F6F7">
     <path d="M244 317L512 154L781 317L713 386L512 264L307 389Z"/>
     <path d="M244 708L512 870L781 708L714 638L512 758L309 636Z"/>
     <path d="M366 518L510 412L657 518L510 625Z"/>
   </g>
- </g>
+ </g></g>
  <path class="draw" d="M753 344H864" stroke="url(#fade)" stroke-width="2" fill="none"/>
  <circle class="pulse" cx="1081" cy="103" r="4" fill="#FFFFFF"/>
  <circle class="pulse" cx="790" cy="291" r="3" fill="#FFFFFF"/>
