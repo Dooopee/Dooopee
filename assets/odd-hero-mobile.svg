@@ -26,11 +26,11 @@ text{font-family:Arial,Helvetica,sans-serif}.mono{font-family:Consolas,'Liberati
 <g class="scan"><rect x="-30" y="395" width="68" height="276" fill="url(#beam)"/></g>
 <g stroke="#8D9199" stroke-opacity=".45" fill="none"><path d="M128 460L344 422L551 460V604L344 642L128 604Z"/><path d="M160 619L513 434" stroke-opacity=".22"/></g>
 <path class="trace" d="M128 460L344 422L551 460V604L344 642L128 604Z" fill="none" stroke="#F7F7F7" stroke-opacity=".5" stroke-dasharray="20 25 3 52"/>
-<g class="mark" transform="translate(175 395) scale(.33)" fill="#F6F6F7">
+<g transform="translate(175 395) scale(.33)" fill="#F6F6F7"><g class="mark">
 <path d="M244 317L512 154L781 317L713 386L512 264L307 389Z"/>
 <path d="M244 708L512 870L781 708L714 638L512 758L309 636Z"/>
 <path d="M366 518L510 412L657 518L510 625Z"/>
-</g>
+</g></g>
 <circle class="pulse" cx="538" cy="470" r="4" fill="#FFFFFF"/>
 <text x="40" y="694" font-size="14" fill="#B5B8BF" class="mono">PRIVATE DEVELOPMENT</text>
 <text x="640" y="694" font-size="14" text-anchor="end" fill="#8E939D" class="mono">ODD / 01</text>
